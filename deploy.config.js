@@ -15,30 +15,54 @@ config.js
   🎉现已更新模块引用逻辑，远端备份时间格式改为 `yyyy-MM-dd_HH:mm:ss`
   */
 
-  const config = [
-    {
+//   const config = [
+//     {
+//       name: '魔点门禁',
+//       env: '开发环境',
+//       host: '192.168.4.80',
+//       username: 'h5',
+//       password: '123456',
+//       publicPath: 'distLocal', // 目标压缩目录(可使用相对地址)
+//     //   openCompress: true, // 是否开启本地压缩
+//       path: '/home/h5/webroot/facedoor/', // 远端目录
+//       script: 'build:dev-tower' // 发布命令
+//     },
+//     {
+//       name: '魔点门禁',
+//       env: '测试环境',
+//       host: '192.168.7.201',
+//       username: 'root',
+//       password: '123456',
+//       publicPath: 'distLocal', // 目标压缩目录(可使用相对地址)
+//     //   openCompress: true, // 是否开启本地压缩
+//       path: '/home/h5/webroot/facedoor/', // 远端目录
+//       script: 'build:test-tower' // 发布命令
+//     }
+//   ]
+
+  const config = {
       name: '魔点门禁',
-      env: '开发环境',
-      host: '192.168.4.80',
-      username: 'h5',
-      password: '123456',
-      publicPath: 'distLocal', // 目标压缩目录(可使用相对地址)
-      openCompress: true, // 是否开启本地压缩
-      path: '/home/h5/webroot/facedoor/', // 远端目录
-      script: 'build:dev-tower' // 发布命令
-    },
-    {
-      name: '魔点门禁',
-      env: '测试环境',
-      host: '192.168.7.201',
-      username: 'root',
-      password: '123456',
-      publicPath: 'distLocal', // 目标压缩目录(可使用相对地址)
-      openCompress: true, // 是否开启本地压缩
-      path: '/home/h5/webroot/facedoor/', // 远端目录
-      script: 'build:test-tower' // 发布命令
-    }
-  ]
+      dev: {
+        env: '开发环境',
+        host: '192.168.4.80',
+        username: 'h5',
+        password: '123456',
+        publicPath: 'distLocal', // 目标压缩目录(可使用相对地址)
+      //   openCompress: true, // 是否开启本地压缩
+        path: '/home/h5/webroot/facedoor/', // 远端目录
+        script: 'build:dev-tower' // 发布命令
+      },
+      test: {
+        env: '测试环境',
+        host: '192.168.7.201',
+        username: 'root',
+        password: '123456',
+        publicPath: 'distLocal', // 目标压缩目录(可使用相对地址)
+      //   openCompress: true, // 是否开启本地压缩
+        path: '/home/h5/webroot/facedoor/', // 远端目录
+        script: 'build:test-tower' // 发布命令
+      }
+  }
   
   module.exports = config
   
