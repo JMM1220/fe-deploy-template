@@ -40,29 +40,26 @@ config.js
 //     }
 //   ]
 
-  const config = {
-      name: '魔点门禁',
-      dev: {
-        env: '开发环境',
-        host: '192.168.4.80',
-        username: 'h5',
-        password: '123456',
-        publicPath: 'distLocal', // 目标压缩目录(可使用相对地址)
-      //   openCompress: true, // 是否开启本地压缩
-        path: '/home/h5/webroot/facedoor/', // 远端目录
-        script: 'build:dev-tower' // 发布命令
-      },
-      test: {
-        env: '测试环境',
-        host: '192.168.7.201',
-        username: 'root',
-        password: '123456',
-        publicPath: 'distLocal', // 目标压缩目录(可使用相对地址)
-      //   openCompress: true, // 是否开启本地压缩
-        path: '/home/h5/webroot/facedoor/', // 远端目录
-        script: 'build:test-tower' // 发布命令
-      }
-  }
-  
-  module.exports = config
-  
+module.exports = {
+    name: '魔点门禁',
+    dev: {
+      env: '开发环境',
+      host: '192.168.4.80',
+      username: 'h5',
+      password: '123456',
+      publicPath: 'distLocal', // 目标压缩目录(可使用相对地址)
+    //   openCompress: true, // 是否开启本地压缩
+      path: '/home/h5/webroot/facedoor/', // 远端目录
+      script: 'build:dev-tower' // 发布命令
+    },
+    test: {
+      env: '测试环境',
+      host: '192.168.7.201',
+      username: 'root',
+      password: '123456',
+      publicPath: 'distLocal', // 目标压缩目录(可使用相对地址)
+    //   openCompress: true, // 是否开启本地压缩
+      path: '/home/h5/webroot/facedoor/', // 远端目录
+      script: 'build:test-tower' // 发布命令
+    }
+}
